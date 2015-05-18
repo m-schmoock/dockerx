@@ -2,5 +2,5 @@
 
 xauth add $DISPLAY . $XCOOKIE
 unset XCOOKIE
-glxgears
+vblank_mode=0 glxgears
 
