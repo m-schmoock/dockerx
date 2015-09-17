@@ -10,6 +10,7 @@ RUN export uid=1001 gid=1001 && \
     mkdir -p /home/xuser && \
     echo "xuser:x:${uid}:${gid}:xuser,,,:/home/xuser:/bin/bash" >> /etc/passwd && \
     echo "xuser:x:${uid}:" >> /etc/group && \
+		groupmod -g 91 video && \
     echo "xuser ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/xuser && \
     chmod 0440 /etc/sudoers.d/xuser && \
     chown ${uid}:${gid} -R /home/xuser && \
